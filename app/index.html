@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="/starts/app/css/main.css">
+<link rel="stylesheet" type="text/css" href="/starts/bower_components/angular-material/angular-material.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+	<body layout="row">
+		<div layout="column" flex id="content" role="main" ng-controller="myCtrl">
+			<md-content layout="vertical" flex id="content">
+				<div layout="row" layout-align="center center" layout-fill>
+					<md-whiteframe class="md-whiteframe-z1" layout="column" flex="30" layout-padding style="margin:100px">
+						<md-content md-theme="docs-dark">
+							<md-input-container class="customContainer">
+								<label>Email</label>
+								<input ng-model="user.email">
+							</md-input-container>
+							<md-input-container class="customContainer">
+								<label>Password</label>
+								<input ng-model="user.password" type="password">
+							</md-input-container>
+							<md-input-container layout-align="center center">
+								<div layout="row" layout-sm="column" layout-margin>
+									<md-button class="md-raised" flex="50" flex-sm="100" ng-click="login(user)">Login</md-button>
+									<md-button class="md-raised md-primary" flex="50" flex-sm="100">Register</md-button>
+								</div>
+							</md-input-container>
+							<md-input-container >
+							<md-button class="md-raised md-primary customContainer">Login with facebook</md-button>
+							</md-input-container>
+							<md-input-container >
+							<md-button class="md-raised md-warn customContainer">Login with Google</md-button>
+							</md-input-container>
+						</md-content>
+					</md-whiteframe>
+				</div>
+			</md-content>
+		</div>
+
+		<script src="/starts/bower_components/requirejs/require.js" data-main="js/main"></script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>starts</title>
+</head>
+<body>
+
+    <div ng-controller="myCtrl">
+        <p ng-bind="message"></p>
+    </div>
+
+    <script src="/starts/bower_components/requirejs/require.js" data-main="js/main"></script>
+</body>
+</html> -->
